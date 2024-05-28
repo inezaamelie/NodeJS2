@@ -62,7 +62,7 @@ app.post('/roles', verifyToken, async (req, res) => {
   }
   try {
     const [result] = await pool.query('INSERT INTO roles SET ?', { role_name });
-    res.json({ message: `role inserted successfully with ID: ${result.insertId}` });
+    res.json({ message: role inserted successfully with ID: ${result.insertId} });
   } catch (err) {
     console.error(err);
     res.status(500).send('Error inserting role');
